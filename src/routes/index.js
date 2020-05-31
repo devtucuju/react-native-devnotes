@@ -6,9 +6,14 @@ import Edit from '../pages/Edit';
 
 const AppStack = createStackNavigator();
 
-export default () => (
-  <AppStack.Navigator>
+const AppRoute = () => (
+  <AppStack.Navigator
+    screenOptions={{
+      headerStyle: {backgroundColor: '#424242'},
+      headerTintColor: '#ffffff',
+    }}>
     <AppStack.Screen component={List} name="List" />
     <AppStack.Screen component={Edit} name="Edit" />
   </AppStack.Navigator>
 );
+export default AppRoute;
